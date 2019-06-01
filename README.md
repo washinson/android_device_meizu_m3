@@ -18,6 +18,22 @@ Optinally use a specific manifest (not a tip):
 Note: 7 more Cyanogen repositories were forked since v0.2, so if you will encounter an error while syncing on top
 of exiting tree, use the suggestion from the error log (sync those repos with --force-sync) 
 
+Add /proc/ged in FD whitelist in frameworks/base/core/jni/fd_utils-inl.h 
+
+    index 84252c0..2888064 100644
+    --- a/core/jni/fd_utils-inl.h
+    +++ b/core/jni/fd_utils-inl.h
+    @@ -58,6 +58,7 @@ static const char* kPathWhitelist[] = {
+       "/dev/ion",
+       "/dev/dri/renderD129", // Fixes b/31172436
+       "/system/framework/org.cyanogenmod.platform-res.apk",
+    +  "/proc/ged" // [+] Decker
+     #ifdef PATH_WHITELIST_EXTRA_H
+     PATH_WHITELIST_EXTRA_H
+     #endif
+
+https://github.com/SlimRoms/frameworks_base/commit/81760e4b9026c3b3153a8e6691494484c7b92897
+
 Build the code:
 
     source build/envsetup.sh
