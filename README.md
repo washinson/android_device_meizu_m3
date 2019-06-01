@@ -34,10 +34,6 @@ Current state
     - Preview
     - Still image capturing
 - Audio is working
-- Telephony is working
-    - USIM (3G) supported
-    - Incoming/outgoung call
-    - Data connection (3G/2G)
 - GPS is working
 - BT is working (discovery and connect were tested only)
 
