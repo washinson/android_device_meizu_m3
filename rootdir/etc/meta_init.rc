@@ -439,9 +439,8 @@ service mobile_log_d /system/bin/mobile_log_d
     class main
 
 #mass_storage,adb,acm
-#modify by yangjiajun@wind-mobi.com 2016-6-7
 on property:ro.boot.usbconfig=0
-    write /sys/class/android_usb/android0/iSerial " "
+    write /sys/class/android_usb/android0/iSerial $ro.serialno
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0e8d
     write /sys/class/android_usb/android0/idProduct 2006

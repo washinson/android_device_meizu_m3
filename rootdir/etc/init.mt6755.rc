@@ -1,5 +1,6 @@
 # MTK platform .rc configure
 
+import init.modem.rc
 import init.project.rc
 import /FWUpgradeInit.rc
 import init.xlog.rc
@@ -25,9 +26,6 @@ on init
 
     # BATTERY proc
     chown shell system /proc/mtk_battery_cmd/current_cmd
-	# xuecheng@wind-mobi.com add for bsp test 20160427
-	chmod 0664 /proc/mtk_battery_cmd/current_cmd
-	# xuecheng@wind-mobi.com add for bsp test 20160427
     chown shell system /proc/mtk_battery_cmd/discharging_cmd
 
     export USBOTG_STORAGE /storage/usbotg
@@ -114,42 +112,41 @@ on fs
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/mtk-msdc.0/by-name/userdata
 
     #change partition permissions
-    exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/boot
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/boot
-    exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/recovery
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/recovery
-    exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/secro
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/secro
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/seccfg
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/seccfg
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/proinfo
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/proinfo
-    exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/otp
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/otp
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/nvram
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/nvram
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/para
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/para
-    exec /system/bin/chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/logo
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/logo
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/frp
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/frp
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/ppl
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/ppl
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1img
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/md1img
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1dsp
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/md1dsp
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1arm7
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/md1arm7
-    exec /system/bin/chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md3img
-    exec /system/bin/chown root:system /dev/block/platform/mtk-msdc.0/by-name/md3img
-    write /sys/kernel/debug/tracing/trace_marker "E"
+    chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/boot
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/boot
+    chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/recovery
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/recovery
+    chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/secro
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/secro
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/seccfg
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/seccfg
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/proinfo
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/proinfo
+    chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/otp
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/otp
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/nvram
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/nvram
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/para
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/para
+    chmod 0640 /dev/block/platform/mtk-msdc.0/by-name/logo
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/logo
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/frp
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/frp
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/ppl
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/ppl
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1img
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/md1img
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1dsp
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/md1dsp
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md1arm7
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/md1arm7
+    chmod 0660 /dev/block/platform/mtk-msdc.0/by-name/md3img
+    chown root system /dev/block/platform/mtk-msdc.0/by-name/md3img
     write /proc/bootprof "INIT:Mount_END"
 
-on fs
-
-   mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
+#on fs
+#
+#   mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
@@ -224,7 +221,7 @@ on post-fs-data
 
     # dhcp server
     mkdir /data/misc/dhcp 0770 dhcp wifi
-    chown dhcp system /data/misc/dhcp
+    chown dhcp wifi /data/misc/dhcp
 
     # dhcpv6 server
     mkdir /data/misc/wide-dhcpv6 0770 dhcp wifi
@@ -668,8 +665,8 @@ on post-fs-data
 
     # bluetooth
     mkdir /data/@btmtk 0770 bluetooth net_bt
-    chown bluetooth net_bt_stack /data/@btmtk/host_cache
-    chown bluetooth net_bt_stack /data/@btmtk/dev_cache
+    chown bluetooth bluetooth /data/@btmtk/host_cache
+    chown bluetooth bluetooth /data/@btmtk/dev_cache
     chown bluetooth bluetooth /dev/hid-keyboard
     chmod 0660 /dev/hid-keyboard
     #Use uinput's default permission
