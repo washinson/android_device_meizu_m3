@@ -295,7 +295,7 @@ etc/.tp/thermal.conf
 etc/.tp/thermal.off.conf
 etc/.tp/thermal.mid.conf
 etc/.tp/thermal.low.conf
-etc/audio_device.xml
+#etc/audio_device.xml
 etc/bluetooth/auto_pair_devlist.conf
 etc/bluetooth/bt_did.conf
 etc/bluetooth/auto_pair_blacklist.conf
@@ -621,7 +621,7 @@ vendor/lib/libWVStreamControlAPI_L3.so
 xbin/MPED
 xbin/mnld
 xbin/BGW
-usr/keylayout/mtk-kpd.kl
-usr/keylayout/AW9201_ts.kl
-usr/keylayout/mtk-tpd.kl
-usr/keylayout/ACCDET.kl
+#usr/keylayout/mtk-kpd.kl
+#usr/keylayout/AW9201_ts.kl
+#usr/keylayout/mtk-tpd.kl
+#usr/keylayout/ACCDET.kl

@@ -5,4 +5,4 @@ include $(CLEAR_VARS)
 ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 # include the non-open-source counterpart to this file
--include vendor/meizu/meilan3/AndroidBoardVendor.mk
+-include vendor/meizu/m3/AndroidBoardVendor.mk

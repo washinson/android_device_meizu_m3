@@ -1,12 +1,11 @@
-LOCAL_PATH:= $(call my-dir)
 
-include $(call first-makefiles-under,$(LOCAL_PATH))
+LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
+ifeq ($(TARGET_DEVICE),m3)
 
-ifneq ($(TARGET_PREBUILT_KERNEL),)
-# Some modules (ex. external/tinycompress depend on $(KERNEL_OUT)/usr,
-# but this folder is not created for prebuilt kernel, let'c create it
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr:
-	mkdir -p $@
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+# HACK for prebuilt kernel
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+
 endif
