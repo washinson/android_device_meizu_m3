@@ -9,17 +9,6 @@
             - 1: ecc always
             - 2: MMI will show ecc but send to nw as normal call
     -->
-    <!--FLYME:lixuan@Feature modify for flyme emergercy {@ -->
-    <!--
-    <EccEntry Ecc="112" Category="0" Condition="1" />
-    <EccEntry Ecc="911" Category="0" Condition="1" />
-    <EccEntry Ecc="000" Category="0" Condition="0" />
-    <EccEntry Ecc="08" Category="0" Condition="0" />
-    <EccEntry Ecc="110" Category="0" Condition="0" />
-    <EccEntry Ecc="118" Category="0" Condition="0" />
-    <EccEntry Ecc="119" Category="0" Condition="0" />
-    <EccEntry Ecc="999" Category="0" Condition="0" />
-    -->
     <!--international emergency number-->
     <EccEntry Ecc="112" Category="0" Condition="1" />
     <EccEntry Ecc="911" Category="0" Condition="1" />
