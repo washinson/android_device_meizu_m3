@@ -139,7 +139,14 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 \
 	ro.allow.mock.location=1 \
 	ro.debuggable=1 \
-	ro.adb.secure=0
+	ro.adb.secure=0 \
+	persist.radio.multisim.config=dsds \
+	ro.mtk_lte_support=1 \
+	ro.telephony.sim.count=2 \
+	persist.gemini.sim_num=2 \
+	ril.current.share_modem=2 \
+	ro.mtk_gps_support=1 \
+	persist.debug.xlog.enable=1
 
 # Telecom
 #    $(LOCAL_PATH)/configs/cdma_ecc_list.xml:system/etc/cdma_ecc_list.xml
