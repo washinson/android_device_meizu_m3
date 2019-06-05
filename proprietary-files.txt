@@ -625,3 +625,11 @@ xbin/BGW
 #usr/keylayout/AW9201_ts.kl
 #usr/keylayout/mtk-tpd.kl
 #usr/keylayout/ACCDET.kl
+
+# 2 vendor
+lib/libstagefright_omx.so
+lib/libstagefright_soft_ffmpegadec.so
+lib/libstagefright_soft_ffmpegvdec.so
+lib64/libstagefright_omx.so
+lib64/libstagefright_soft_ffmpegadec.so
+lib64/libstagefright_soft_ffmpegvdec.so
