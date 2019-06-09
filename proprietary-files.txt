@@ -609,6 +609,8 @@ bin/thermald
 bin/aee_archive
 bin/thermal_manager
 bin/geomagneticd
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so
+vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/hw/bluetooth.blueangel.so
 vendor/lib/hw/audio.a2dp.blueangel.so
 vendor/lib/drm/libdrmwvmplugin.so
