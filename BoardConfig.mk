@@ -18,3 +18,7 @@ PRODUCT_COPY_FILES += \
     vendor/meizu/m3/proprietary/vendor/lib/hw/audio.a2dp.blueangel.so:system/vendor/lib/hw/audio.a2dp.mt6750.so
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+
+# Radio
+ADD_RADIO_FILES := true
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
