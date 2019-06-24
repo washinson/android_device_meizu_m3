@@ -38,7 +38,8 @@ lib64/libcam_mmp.so
 lib64/libBnMtkCodec.so
 lib64/libbtcusttable.so
 lib64/libcam.hal3a.v3.dng.so
-lib64/libmeizucamera.so
+#TEMPMODULE
+lib64/libmeizucamera.so # MODULE
 lib64/libMtkOmxVorbisEnc.so
 lib64/libPQDCjni.so
 lib64/librilmtk.so
@@ -167,7 +168,8 @@ lib64/libui.so
 lib64/libcvsd_mtk.so
 lib64/libgpu_aux.so
 lib64/libcam1_utils.so
-lib64/libperfservice.so
+#TEMPMODULE
+lib64/libperfservice.so # MODULE
 lib64/libgas.so
 lib64/libfeatureio.cfb.so
 lib64/libfilter_effects.so
@@ -188,7 +190,8 @@ lib64/liba3m.so
 lib64/libcam_hwutils.so
 lib64/libem_lte_jni.so
 lib64/libmdloggerrecycle.so
-lib64/libcfgdevparam.so
+#TEMPMODULE
+lib64/libcfgdevparam.so # MODULE
 lib64/libcam.iopipe.so
 lib64/libcam.camshot.so
 lib64/libmemorydumper.so
@@ -353,7 +356,8 @@ lib/libDR.so
 lib/libshowlogo.so
 lib/libbtcusttable.so
 lib/libcam.hal3a.v3.dng.so
-lib/libmeizucamera.so
+#TEMPMODULE
+lib/libmeizucamera.so # MODULE
 lib/libMtkOmxVorbisEnc.so
 lib/libPQDCjni.so
 lib/librilmtk.so
@@ -503,7 +507,8 @@ lib/libcvsd_mtk.so
 lib/libgpu_aux.so
 lib/libmpe.sensorlistener.so
 lib/libcam1_utils.so
-lib/libperfservice.so
+#TEMPMODULE
+lib/libperfservice.so # MODULE
 lib/libgas.so
 lib/libfeatureio.cfb.so
 lib/libfilter_effects.so
@@ -523,7 +528,8 @@ lib/liba3m.so
 lib/libcam_hwutils.so
 lib/libem_lte_jni.so
 lib/libmdloggerrecycle.so
-lib/libcfgdevparam.so
+#TEMPMODULE
+lib/libcfgdevparam.so # MODULE
 lib/libcam.iopipe.so
 lib/libcam.camshot.so
 lib/libmemorydumper.so

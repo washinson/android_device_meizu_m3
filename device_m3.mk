@@ -3,23 +3,9 @@ $(call inherit-product-if-exists, vendor/meizu/m3/m3-vendor.mk)
 
 LOCAL_PATH := device/meizu/m3
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/meizu/m3/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
 TARGET_OTA_ASSERT_DEVICE := m3,m3s
+LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
-# Telecom
-#    $(LOCAL_PATH)/configs/cdma_ecc_list.xml:system/etc/cdma_ecc_list.xml
+# BT A2DP
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
-    $(LOCAL_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
-    $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-PRODUCT_NAME := full_m3
-PRODUCT_DEVICE := m3
+    vendor/meizu/m3/proprietary/vendor/lib/hw/audio.a2dp.blueangel.so:system/vendor/lib/hw/audio.a2dp.mt6750.so

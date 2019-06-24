@@ -1,11 +1,7 @@
+LOCAL_PATH:= $(call my-dir)
 
-LOCAL_PATH := $(call my-dir)
+ifneq ($(filter m3, $(TARGET_DEVICE)),)
 
-ifeq ($(TARGET_DEVICE),m3)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-# HACK for prebuilt kernel
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+include $(call first-makefiles-under,$(LOCAL_PATH))
 
 endif
