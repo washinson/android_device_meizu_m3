@@ -10,3 +10,7 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 
 #system.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+
+# Radio
+ADD_RADIO_FILES := true
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
